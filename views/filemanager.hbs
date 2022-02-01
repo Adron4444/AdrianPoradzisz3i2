@@ -1,0 +1,30 @@
+<div class="leftPanel">
+  <p>filemenager </p>
+  <a href="/reset">usun dane z tablicy </a>
+</div>
+<table>
+  <tr>
+    <th>id</th>
+    <th>obraz</th>
+    <th>name</th>
+    <th>size</th>
+    <th>type</th>
+    <th>-</th>
+    <th>-</th>
+    <th>-</th>
+  </tr>
+  {{#each uploads}}
+    <tr>
+      <td>{{id}}</td>
+      <td class="img" style="{{#createFoto type}}{{/createFoto}}">
+
+      </td>
+      <td>{{name}}</td>
+      <td>{{size}}</td>
+      <td>{{type}}</td>
+      <td><a href="/delete/?id={{@index}}">DELETE</a></td>
+      <td><a href="/info/?id={{@index}}">INFO</a></td>
+      <td><a href="/download/?id={{@index}}">DOWNLOAD</a></td>
+    </tr>
+  {{/each}}
+</table>
